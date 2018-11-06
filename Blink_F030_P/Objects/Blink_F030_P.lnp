@@ -1,0 +1,11 @@
+--cpu Cortex-M0
+".\objects\stm32f0xx_it.o"
+".\objects\system_stm32f0xx.o"
+".\objects\startup_stm32f0xx.o"
+".\objects\stm32f0xx_gpio.o"
+".\objects\stm32f0xx_rcc.o"
+".\objects\main.o"
+--strict --scatter ".\Objects\Blink_F030_P.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Blink_F030_P.map" -o .\Objects\Blink_F030_P.axf
