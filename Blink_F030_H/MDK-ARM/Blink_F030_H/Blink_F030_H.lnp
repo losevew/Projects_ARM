@@ -1,0 +1,22 @@
+--cpu Cortex-M0
+"blink_f030_h\system_stm32f0xx.o"
+"blink_f030_h\stm32f0xx_hal_msp.o"
+"blink_f030_h\main.o"
+"blink_f030_h\stm32f0xx_it.o"
+"blink_f030_h\stm32f0xx_hal_cortex.o"
+"blink_f030_h\stm32f0xx_hal_gpio.o"
+"blink_f030_h\stm32f0xx_hal_pwr.o"
+"blink_f030_h\stm32f0xx_hal_flash.o"
+"blink_f030_h\stm32f0xx_hal.o"
+"blink_f030_h\stm32f0xx_hal_i2c.o"
+"blink_f030_h\stm32f0xx_hal_i2c_ex.o"
+"blink_f030_h\stm32f0xx_hal_rcc.o"
+"blink_f030_h\stm32f0xx_hal_rcc_ex.o"
+"blink_f030_h\stm32f0xx_hal_flash_ex.o"
+"blink_f030_h\stm32f0xx_hal_pwr_ex.o"
+"blink_f030_h\stm32f0xx_hal_dma.o"
+"blink_f030_h\startup_stm32f030x6.o"
+--library_type=microlib --strict --scatter "Blink_F030_H\Blink_F030_H.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Blink_F030_H.map" -o Blink_F030_H\Blink_F030_H.axf
