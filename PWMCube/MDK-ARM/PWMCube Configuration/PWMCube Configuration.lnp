@@ -1,0 +1,23 @@
+--cpu Cortex-M3
+"pwmcube configuration\system_stm32f1xx.o"
+"pwmcube configuration\stm32f1xx_hal_gpio.o"
+"pwmcube configuration\stm32f1xx_hal_pwr.o"
+"pwmcube configuration\stm32f1xx_hal_tim.o"
+"pwmcube configuration\stm32f1xx_hal_cortex.o"
+"pwmcube configuration\stm32f1xx_hal_flash_ex.o"
+"pwmcube configuration\stm32f1xx_hal.o"
+"pwmcube configuration\stm32f1xx_hal_dma.o"
+"pwmcube configuration\stm32f1xx_hal_rcc.o"
+"pwmcube configuration\stm32f1xx_hal_flash.o"
+"pwmcube configuration\stm32f1xx_hal_gpio_ex.o"
+"pwmcube configuration\stm32f1xx_hal_rcc_ex.o"
+"pwmcube configuration\stm32f1xx_hal_tim_ex.o"
+"pwmcube configuration\main.o"
+"pwmcube configuration\stm32f1xx_it.o"
+"pwmcube configuration\stm32f1xx_hal_msp.o"
+"pwmcube configuration\startup_stm32f103xb.o"
+--library_type=microlib --strict --scatter "PWMCube Configuration\PWMCube Configuration.sct"
+
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "PWMCube Configuration.map" -o "PWMCube Configuration\PWMCube Configuration.axf"
