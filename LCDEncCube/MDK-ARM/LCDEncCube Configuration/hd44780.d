@@ -1,0 +1,9 @@
+lcdenccube configuration\hd44780.o: ..\Src\hd44780.c
+lcdenccube configuration\hd44780.o: ../Inc/hd44780.h
+lcdenccube configuration\hd44780.o: ../Inc/lcd_cfg.h
+lcdenccube configuration\hd44780.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xb.h
+lcdenccube configuration\hd44780.o: ../Drivers/CMSIS/Include/core_cm3.h
+lcdenccube configuration\hd44780.o: C:\Keil\ARM\ARMCC\Bin\..\include\stdint.h
+lcdenccube configuration\hd44780.o: ../Drivers/CMSIS/Include/core_cmInstr.h
+lcdenccube configuration\hd44780.o: ../Drivers/CMSIS/Include/core_cmFunc.h
+lcdenccube configuration\hd44780.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
