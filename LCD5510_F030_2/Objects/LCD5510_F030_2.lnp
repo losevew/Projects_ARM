@@ -1,0 +1,9 @@
+--cpu Cortex-M0
+".\objects\main.o"
+".\objects\5510.o"
+".\objects\startup_stm32f030x6.o"
+".\objects\system_stm32f0xx.o"
+--strict --scatter ".\Objects\LCD5510_F030_2.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LCD5510_F030_2.map" -o .\Objects\LCD5510_F030_2.axf
