@@ -1,0 +1,13 @@
+--cpu Cortex-M0
+".\objects\max7219.o"
+".\objects\font.o"
+".\objects\f6x8m.o"
+".\objects\ledmatrix.o"
+".\objects\scroll_demo.o"
+".\objects\main.o"
+".\objects\startup_stm32f030x6.o"
+".\objects\system_stm32f0xx.o"
+--strict --scatter ".\Objects\MAX7219_F030_GPIO_matrix.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MAX7219_F030_GPIO_matrix.map" -o .\Objects\MAX7219_F030_GPIO_matrix.axf
