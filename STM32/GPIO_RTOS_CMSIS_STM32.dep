@@ -1,0 +1,39 @@
+Dependencies for Project 'GPIO_RTOS_CMSIS', Target 'STM32': (DO NOT MODIFY !)
+F (.\STM32F10x.s)(0x4BB1D714)(--cpu Cortex-M3 -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x--list .\stm32f10x.lst --xref -o .\stm32f10x.o --depend .\stm32f10x.d)
+F (.\MAIN\SRC\main.c)(0x4E16D51C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\CMSIS\CoreSupport -I.\CMSIS\DeviceSupport\ST\STM32F10x -I.\MAIN\INC-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (D:\Projects ARM\STM32\MAIN\INC\HAL.h)(0x4C9E8E8E)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD140D4)
+I (D:\Projects ARM\STM32\CMSIS\CoreSupport\core_cm3.h)(0x4BD140D4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD140D6)
+I (D:\Projects ARM\STM32\MAIN\INC\EERTOS.h)(0x4C55E4C2)
+I (D:\Projects ARM\STM32\MAIN\INC\EERTOSHAL.h)(0x4C8B3BCE)
+F (.\MAIN\SRC\EERTOS.c)(0x4E1C723C)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\CMSIS\CoreSupport -I.\CMSIS\DeviceSupport\ST\STM32F10x -I.\MAIN\INC-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -o .\eertos.o --omf_browse .\eertos.crf --depend .\eertos.d)
+I (D:\Projects ARM\STM32\MAIN\INC\EERTOS.h)(0x4C55E4C2)
+I (D:\Projects ARM\STM32\MAIN\INC\HAL.h)(0x4C9E8E8E)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD140D4)
+I (D:\Projects ARM\STM32\CMSIS\CoreSupport\core_cm3.h)(0x4BD140D4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD140D6)
+I (D:\Projects ARM\STM32\MAIN\INC\EERTOSHAL.h)(0x4C8B3BCE)
+F (.\MAIN\SRC\EERTOSHAL.c)(0x4C8B3D10)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\CMSIS\CoreSupport -I.\CMSIS\DeviceSupport\ST\STM32F10x -I.\MAIN\INC-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -o .\eertoshal.o --omf_browse .\eertoshal.crf --depend .\eertoshal.d)
+I (D:\Projects ARM\STM32\MAIN\INC\EERTOSHAL.h)(0x4C8B3BCE)
+I (D:\Projects ARM\STM32\MAIN\INC\HAL.h)(0x4C9E8E8E)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD140D4)
+I (D:\Projects ARM\STM32\CMSIS\CoreSupport\core_cm3.h)(0x4BD140D4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD140D6)
+I (D:\Projects ARM\STM32\MAIN\INC\EERTOS.h)(0x4C55E4C2)
+F (.\MAIN\SRC\HAL.c)(0x4E16D606)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\CMSIS\CoreSupport -I.\CMSIS\DeviceSupport\ST\STM32F10x -I.\MAIN\INC-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -o .\hal.o --omf_browse .\hal.crf --depend .\hal.d)
+I (D:\Projects ARM\STM32\MAIN\INC\HAL.h)(0x4C9E8E8E)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD140D4)
+I (D:\Projects ARM\STM32\CMSIS\CoreSupport\core_cm3.h)(0x4BD140D4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD140D6)
+F (.\CMSIS\CoreSupport\core_cm3.c)(0x4BD140D4)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\CMSIS\CoreSupport -I.\CMSIS\DeviceSupport\ST\STM32F10x -I.\MAIN\INC-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
+F (.\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.c)(0x4BD140D6)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I.\CMSIS\CoreSupport -I.\CMSIS\DeviceSupport\ST\STM32F10x -I.\MAIN\INC-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\PACK\ARM\CMSIS\3.20.3\CMSIS\Include-I C:\Keil\ARM\PACK\Keil\STM32F1xx_DFP\1.0.2\Device\Include-I C:\Keil\ARM\Inc\ST\STM32F10x-DSTM32F10X_MD -o .\system_stm32f10x.o --omf_browse .\system_stm32f10x.crf --depend .\system_stm32f10x.d)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD140D4)
+I (D:\Projects ARM\STM32\CMSIS\CoreSupport\core_cm3.h)(0x4BD140D4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7EF84)
+I (D:\Projects ARM\STM32\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD140D6)

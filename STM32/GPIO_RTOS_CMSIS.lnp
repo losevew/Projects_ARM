@@ -1,0 +1,12 @@
+--cpu Cortex-M3
+".\stm32f10x.o"
+".\main.o"
+".\eertos.o"
+".\eertoshal.o"
+".\hal.o"
+".\core_cm3.o"
+".\system_stm32f10x.o"
+--strict --scatter ".\GPIO_RTOS_CMSIS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\GPIO_RTOS_CMSIS.map" -o .\GPIO_RTOS_CMSIS.axf

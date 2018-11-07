@@ -1,0 +1,25 @@
+*** Creating Trace Output File 'GPIO_RTOS_CMSIS.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"stm32f10x.o"'
+### List of Objects: adding '"main.o"'
+### List of Objects: adding '"eertos.o"'
+### List of Objects: adding '"eertoshal.o"'
+### List of Objects: adding '"hal.o"'
+### List of Objects: adding '"core_cm3.o"'
+### List of Objects: adding '"system_stm32f10x.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "stm32f10x.o" "main.o" "eertos.o" "eertoshal.o" "hal.o" "core_cm3.o" "system_stm32f10x.o" --strict --scatter "GPIO_RTOS_CMSIS.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\GPIO_RTOS_CMSIS.map" -o "GPIO_RTOS_CMSIS.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'GPIO_RTOS_CMSIS.axf'
+### ADS-LD Command File: 'GPIO_RTOS_CMSIS.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'GPIO_RTOS_CMSIS.lnp', Handle=0x00000228
+### Writing '.lnp' file
+### ADS-LD Command file 'GPIO_RTOS_CMSIS.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
