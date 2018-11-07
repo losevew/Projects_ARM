@@ -1,0 +1,9 @@
+--cpu Cortex-M0
+".\objects\f10x-pcd8544.o"
+".\objects\main.o"
+".\objects\startup_stm32f030x6.o"
+".\objects\system_stm32f0xx.o"
+--strict --scatter ".\Objects\LCD_UART_F030.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\LCD_UART_F030.map" -o .\Objects\LCD_UART_F030.axf
