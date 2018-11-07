@@ -1,2 +1,4 @@
 * linguist-vendored
 *.c linguist-vendored=false
+* text eol=crlf
+* text eol=lf
