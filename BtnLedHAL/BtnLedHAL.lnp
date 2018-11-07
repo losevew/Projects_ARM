@@ -1,0 +1,21 @@
+--cpu Cortex-M3
+".\stm32f1xx_hal.o"
+".\stm32f1xx_hal_cortex.o"
+".\stm32f1xx_hal_dma.o"
+".\stm32f1xx_hal_flash.o"
+".\stm32f1xx_hal_flash_ex.o"
+".\stm32f1xx_hal_gpio.o"
+".\stm32f1xx_hal_gpio_ex.o"
+".\stm32f1xx_hal_pwr.o"
+".\stm32f1xx_hal_rcc.o"
+".\stm32f1xx_hal_rcc_ex.o"
+".\gpio.o"
+".\main.o"
+".\stm32f1xx_hal_msp.o"
+".\stm32f1xx_it.o"
+".\startup_stm32f103xb.o"
+".\system_stm32f1xx.o"
+--strict --scatter ".\BtnLedHAL.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\BtnLedHAL.map" -o .\BtnLedHAL.axf
