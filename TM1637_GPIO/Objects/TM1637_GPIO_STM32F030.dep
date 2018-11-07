@@ -1,0 +1,21 @@
+Dependencies for Project 'TM1637_GPIO', Target 'STM32F030': (DO NOT MODIFY !)
+F (.\main.c)(0x5A870BF7)(--c99 -c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections-I.\RTE\_STM32F030-IC:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F030x6-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (C:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x5978B3FE)
+I (C:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f030x6.h)(0x5978B3FE)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm0.h)(0x5A8E6632)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x57F64D08)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55DC32)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E6632)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E6632)
+I (C:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x5978B3FE)
+I (TM1637.h)(0x5A870AD0)
+F (RTE\Device\STM32F030F4\startup_stm32f030x6.s)(0x56EA3C8A)(--cpu Cortex-M0 -g --apcs=interwork -I.\RTE\_STM32F030-IC:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include--pd "__UVISION_VERSION SETA 523" --pd "_RTE_ SETA 1" --pd "STM32F030x6 SETA 1"--list .\listings\startup_stm32f030x6.lst --xref -o .\objects\startup_stm32f030x6.o --depend .\objects\startup_stm32f030x6.d)
+F (RTE\Device\STM32F030F4\system_stm32f0xx.c)(0x56EA3C8A)(--c99 -c --cpu Cortex-M0 -g -O0 --apcs=interwork --split_sections-I.\RTE\_STM32F030-IC:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include-IC:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include-IC:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Device\Include-D__UVISION_VERSION="523" -D_RTE_ -DSTM32F030x6-o .\objects\system_stm32f0xx.o --omf_browse .\objects\system_stm32f0xx.crf --depend .\objects\system_stm32f0xx.d)
+I (C:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h)(0x5978B3FE)
+I (C:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f030x6.h)(0x5978B3FE)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\core_cm0.h)(0x5A8E6632)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x57F64D08)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_version.h)(0x5A55DC32)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_compiler.h)(0x5A8E6632)
+I (C:\Keil\ARM\PACK\ARM\CMSIS\5.3.0\CMSIS\Include\cmsis_armcc.h)(0x5A8E6632)
+I (C:\Keil\ARM\PACK\Keil\STM32F0xx_DFP\2.0.0\Drivers\CMSIS\Device\ST\STM32F0xx\Include\system_stm32f0xx.h)(0x5978B3FE)
