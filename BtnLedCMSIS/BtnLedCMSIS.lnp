@@ -1,0 +1,9 @@
+--cpu Cortex-M3
+".\stm32f10x.o"
+".\main.o"
+".\core_cm3.o"
+".\system_stm32f10x.o"
+--strict --scatter ".\BtnLedCMSIS.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\BtnLedCMSIS.map" -o .\BtnLedCMSIS.axf

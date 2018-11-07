@@ -1,0 +1,14 @@
+Dependencies for Project 'BtnLedCMSIS', Target 'STM32': (DO NOT MODIFY !)
+F (.\STM32F10x.s)(0x5209ED8E)(--cpu Cortex-M3 -g --apcs=interwork -IC:\Keil\ARM\RV31\INC-IC:\Keil\ARM\CMSIS\Include-IC:\Keil\ARM\Inc\ST\STM32F10x--pd "__UVISION_VERSION SETA 523"--list .\stm32f10x.lst --xref -o .\stm32f10x.o --depend .\stm32f10x.d)
+F (.\MAIN\SRC\main.c)(0x5676F214)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\CMSIS\CoreSupport -I .\CMSIS\DeviceSupport\ST\STM32F10x-IC:\Keil\ARM\RV31\INC-IC:\Keil\ARM\CMSIS\Include-IC:\Keil\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523"-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (.\CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD14EE4)
+I (.\CMSIS\CoreSupport\core_cm3.h)(0x4BD14EE4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x57F64D08)
+I (.\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD14EE6)
+F (.\CMSIS\CoreSupport\core_cm3.c)(0x4BD14EE4)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\CMSIS\CoreSupport -I .\CMSIS\DeviceSupport\ST\STM32F10x-IC:\Keil\ARM\RV31\INC-IC:\Keil\ARM\CMSIS\Include-IC:\Keil\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523"-o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x57F64D08)
+F (.\CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.c)(0x4BD14EE6)(--c99 -c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\CMSIS\CoreSupport -I .\CMSIS\DeviceSupport\ST\STM32F10x-IC:\Keil\ARM\RV31\INC-IC:\Keil\ARM\CMSIS\Include-IC:\Keil\ARM\Inc\ST\STM32F10x-D__UVISION_VERSION="523"-o .\system_stm32f10x.o --omf_browse .\system_stm32f10x.crf --depend .\system_stm32f10x.d)
+I (CMSIS\DeviceSupport\ST\STM32F10x\stm32f10x.h)(0x4BD14EE4)
+I (.\CMSIS\CoreSupport\core_cm3.h)(0x4BD14EE4)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x57F64D08)
+I (CMSIS\DeviceSupport\ST\STM32F10x\system_stm32f10x.h)(0x4BD14EE6)
