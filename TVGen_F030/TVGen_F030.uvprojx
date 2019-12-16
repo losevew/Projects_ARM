@@ -13,16 +13,16 @@
       <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
-          <Device>STM32F030F4</Device>
+          <Device>STM32F030F4Px</Device>
           <Vendor>STMicroelectronics</Vendor>
           <PackID>Keil.STM32F0xx_DFP.2.0.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
-          <Cpu>IRAM(0x20000000,0x1000) IROM(0x08000000,0x4000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
+          <Cpu>IRAM(0x20000000,0x00001000) IROM(0x08000000,0x00004000) CPUTYPE("Cortex-M0") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
           <StartupFile></StartupFile>
-          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F0xx_16 -FS08000000 -FL04000 -FP0($$Device:STM32F030F4$Flash\STM32F0xx_16.FLM))</FlashDriverDll>
+          <FlashDriverDll>UL2CM3(-S0 -C0 -P0 -FD20000000 -FC1000 -FN1 -FF0STM32F0xx_16 -FS08000000 -FL04000 -FP0($$Device:STM32F030F4Px$CMSIS\Flash\STM32F0xx_16.FLM))</FlashDriverDll>
           <DeviceId>0</DeviceId>
-          <RegisterFile>$$Device:STM32F030F4$Device\Include\stm32f0xx.h</RegisterFile>
+          <RegisterFile>$$Device:STM32F030F4Px$Drivers\CMSIS\Device\ST\STM32F0xx\Include\stm32f0xx.h</RegisterFile>
           <MemoryEnv></MemoryEnv>
           <Cmp></Cmp>
           <Asm></Asm>
@@ -32,7 +32,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:STM32F030F4$SVD\STM32F0x0.svd</SFDFile>
+          <SFDFile>$$Device:STM32F030F4Px$CMSIS\SVD\STM32F0x0.svd</SFDFile>
           <bCustSvd>0</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
@@ -48,7 +48,7 @@
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
           <OutputDirectory>.\Objects\</OutputDirectory>
-          <OutputName>Blink_F030_P</OutputName>
+          <OutputName>TVGen_F030</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
@@ -332,10 +332,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>--C99</MiscControls>
-              <Define>USE_STDPERIPH_DRIVER</Define>
+              <MiscControls></MiscControls>
+              <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Blink_F030_P;.\CMSIS\Include;.\CMSIS</IncludePath>
+              <IncludePath></IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -377,72 +377,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>CMSIS</GroupName>
-          <Files>
-            <File>
-              <FileName>stm32f0xx_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CMSIS\stm32f0xx_it.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f0xx.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\CMSIS\system_stm32f0xx.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CMSIS\Include\stm32f0xx.h</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f0xx.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CMSIS\Include\system_stm32f0xx.h</FilePath>
-            </File>
-            <File>
-              <FileName>startup_stm32f0xx.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\CMSIS\startup_stm32f0xx.s</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx_conf.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CMSIS\stm32f0xx_conf.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx_it.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\CMSIS\stm32f0xx_it.h</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>STM32F030PL</GroupName>
-          <Files>
-            <File>
-              <FileName>stm32f0xx_gpio.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\stm32f0xx_gpio.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx_rcc.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\stm32f0xx_rcc.h</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32f0xx_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f0xx_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\stm32f0xx_rcc.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>UserCode</GroupName>
+          <GroupName>User Code</GroupName>
           <Files>
             <File>
               <FileName>main.c</FileName>
@@ -451,14 +386,50 @@
             </File>
           </Files>
         </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Device</GroupName>
+        </Group>
       </Groups>
     </Target>
   </Targets>
 
   <RTE>
     <apis/>
-    <components/>
-    <files/>
+    <components>
+      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="5.1.1" condition="ARMv6_7_8-M Device">
+        <package name="CMSIS" schemaVersion="1.3" url="http://www.keil.com/pack/" vendor="ARM" version="5.3.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F030"/>
+        </targetInfos>
+      </component>
+      <component Cbundle="Standalone" Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F0 CMSIS">
+        <package name="STM32F0xx_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.0.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F030"/>
+        </targetInfos>
+      </component>
+    </components>
+    <files>
+      <file attr="config" category="source" condition="STM32F030x6 ARMCC" name="Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\arm\startup_stm32f030x6.s" version="2.3.3">
+        <instance index="0">RTE\Device\STM32F030F4Px\startup_stm32f030x6.s</instance>
+        <component Cbundle="Standalone" Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F0 CMSIS"/>
+        <package name="STM32F0xx_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.0.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F030"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="Drivers\CMSIS\Device\ST\STM32F0xx\Source\Templates\system_stm32f0xx.c" version="2.3.3">
+        <instance index="0">RTE\Device\STM32F030F4Px\system_stm32f0xx.c</instance>
+        <component Cbundle="Standalone" Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="1.0.0" condition="STM32F0 CMSIS"/>
+        <package name="STM32F0xx_DFP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="Keil" version="2.0.0"/>
+        <targetInfos>
+          <targetInfo name="STM32F030"/>
+        </targetInfos>
+      </file>
+    </files>
   </RTE>
 
 </Project>
