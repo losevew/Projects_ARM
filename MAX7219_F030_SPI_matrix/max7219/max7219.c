@@ -22,7 +22,7 @@ void max7219_init(void)
 	RCC->AHBENR |= RCC_AHBENR_GPIOAEN ;
 	RCC->APB2ENR |= RCC_APB2ENR_SPI1EN ;
 	
-	 /* (1) Select AF mode (10) on PA4, PA5, PA6, PA7 */
+	 /* (1) Select AF mode (10) on  PA5, PA6, PA7 */
 	/* (2) AF0 for SPI1 signals */
 	GPIOA->MODER = (GPIOA->MODER &~( GPIO_MODER_MODER5 | GPIO_MODER_MODER6 | GPIO_MODER_MODER7))\
                   | ( GPIO_MODER_MODER5_1 | GPIO_MODER_MODER6_1 | GPIO_MODER_MODER7_1); /* (1) */

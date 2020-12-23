@@ -1,66 +1,66 @@
-/* пины порта к которым подключен дисплей
+/* РїРёРЅС‹ РїРѕСЂС‚Р° Рє РєРѕС‚РѕСЂС‹Рј РїРѕРґРєР»СЋС‡РµРЅ РґРёСЃРїР»РµР№
 
-RST - A5
-CE  - A6
-DC  - A7
-DIN - A9
-CLK - A10
+RST - A1
+CE  - A2
+DC  - A3
+DIN - A5
+CLK - A6
 
 */
 
-#define RST  GPIO_ODR_4
-#define SCE  GPIO_ODR_5
-#define DC   GPIO_ODR_7
-#define MOSI GPIO_ODR_9
-#define SCLK GPIO_ODR_10
+#define RST  GPIO_ODR_1
+#define SCE  GPIO_ODR_2
+#define DC   GPIO_ODR_3
+#define MOSI GPIO_ODR_5
+#define SCLK GPIO_ODR_6
 
-#define RST_PIN_OTYP GPIO_OTYPER_OT_4
-#define SCE_PIN_OTYP GPIO_OTYPER_OT_5
-#define DC_PIN_OTYP GPIO_OTYPER_OT_7
-#define MOSI_PIN_OTYP GPIO_OTYPER_OT_9
-#define SCLK_PIN_OTYP GPIO_OTYPER_OT_10
+#define RST_PIN_OTYP GPIO_OTYPER_OT_1
+#define SCE_PIN_OTYP GPIO_OTYPER_OT_2
+#define DC_PIN_OTYP GPIO_OTYPER_OT_3
+#define MOSI_PIN_OTYP GPIO_OTYPER_OT_5
+#define SCLK_PIN_OTYP GPIO_OTYPER_OT_6
 
-#define RST_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR4
-#define SCE_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR5
-#define DC_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR7
-#define MOSI_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR9
-#define SCLK_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR10
+#define RST_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR1
+#define SCE_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR2
+#define DC_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR3
+#define MOSI_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR5
+#define SCLK_PIN_OSPEED GPIO_OSPEEDR_OSPEEDR6
 
-#define RST_PIN_MODE GPIO_MODER_MODER4_0
-#define SCE_PIN_MODE GPIO_MODER_MODER5_0
-#define DC_PIN_MODE GPIO_MODER_MODER7_0
-#define MOSI_PIN_MODE GPIO_MODER_MODER9_0
-#define SCLK_PIN_MODE GPIO_MODER_MODER10_0
+#define RST_PIN_MODE GPIO_MODER_MODER1_0
+#define SCE_PIN_MODE GPIO_MODER_MODER2_0
+#define DC_PIN_MODE GPIO_MODER_MODER3_0
+#define MOSI_PIN_MODE GPIO_MODER_MODER5_0
+#define SCLK_PIN_MODE GPIO_MODER_MODER6_0
 
 
-#define LCD_PORT GPIOA	// порт к которому подключен дисплей
+#define LCD_PORT GPIOA	// РїРѕСЂС‚ Рє РєРѕС‚РѕСЂРѕРјСѓ РїРѕРґРєР»СЋС‡РµРЅ РґРёСЃРїР»РµР№
 
-#define LCD_PH RCC_AHBENR_GPIOAEN // шина к которой подключена дисплей
+#define LCD_PH RCC_AHBENR_GPIOAEN // С€РёРЅР° Рє РєРѕС‚РѕСЂРѕР№ РїРѕРґРєР»СЋС‡РµРЅР° РґРёСЃРїР»РµР№
 
 void lcd8544_senddata(unsigned char data);
 
-void lcd8544_init(void);  // инициалиазация дисплея
+void lcd8544_init(void);  // РёРЅРёС†РёР°Р»РёР°Р·Р°С†РёСЏ РґРёСЃРїР»РµСЏ
 
-void lcd8544_refresh(void); // обновление экрана из буфера
+void lcd8544_refresh(void); // РѕР±РЅРѕРІР»РµРЅРёРµ СЌРєСЂР°РЅР° РёР· Р±СѓС„РµСЂР°
 
-void lcd8544_clear(void); // очистка дисплея
+void lcd8544_clear(void); // РѕС‡РёСЃС‚РєР° РґРёСЃРїР»РµСЏ
 
-void lcd8544_command(unsigned char cmd);  // передача команд
+void lcd8544_command(unsigned char cmd);  // РїРµСЂРµРґР°С‡Р° РєРѕРјР°РЅРґ
 
-void lcd8544_gotoxy(unsigned char x, unsigned char y); // установка курсора а произвольную позицию
+void lcd8544_gotoxy(unsigned char x, unsigned char y); // СѓСЃС‚Р°РЅРѕРІРєР° РєСѓСЂСЃРѕСЂР° Р° РїСЂРѕРёР·РІРѕР»СЊРЅСѓСЋ РїРѕР·РёС†РёСЋ
 
-void lcd8544_putpix(unsigned char x, unsigned char y, unsigned char mode); // вывод пиксела
+void lcd8544_putpix(unsigned char x, unsigned char y, unsigned char mode); // РІС‹РІРѕРґ РїРёРєСЃРµР»Р°
 
-void lcd8544_line(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode); // вывод линии
+void lcd8544_line(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode); // РІС‹РІРѕРґ Р»РёРЅРёРё
 
-void lcd8544_rect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode); // прямоугольник
+void lcd8544_rect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode); // РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє
 
-void lcd8544_fillrect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode); // закрашенный прямоугольник
+void lcd8544_fillrect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode); // Р·Р°РєСЂР°С€РµРЅРЅС‹Р№ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє
 
-void lcd8544_putchar(unsigned char px, unsigned char py, unsigned char ch, unsigned char mode); //  вывод символа
+void lcd8544_putchar(unsigned char px, unsigned char py, unsigned char ch, unsigned char mode); //  РІС‹РІРѕРґ СЃРёРјРІРѕР»Р°
 
-void lcd8544_dec(unsigned int numb, unsigned char dcount, unsigned char x, unsigned char y, unsigned char mode); // вывод десятичного числа
+void lcd8544_dec(unsigned int numb, unsigned char dcount, unsigned char x, unsigned char y, unsigned char mode); // РІС‹РІРѕРґ РґРµСЃСЏС‚РёС‡РЅРѕРіРѕ С‡РёСЃР»Р°
 
-void lcd8544_putstr(unsigned char x, unsigned char y, const unsigned char str[], unsigned char mode); // вывод строки
+void lcd8544_putstr(unsigned char x, unsigned char y, const unsigned char str[], unsigned char mode); // РІС‹РІРѕРґ СЃС‚СЂРѕРєРё
 
 

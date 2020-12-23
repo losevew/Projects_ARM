@@ -1,28 +1,28 @@
 #include "stm32f0xx.h"
 #include "f10x-pcd8544.h"
-#include "font6x8.h"	  // шрифт
+#include "font6x8ru_sm.h"	  // С€СЂРёС„С‚
 
 
-// Управление линией LCD_CS
+// РЈРїСЂР°РІР»РµРЅРёРµ Р»РёРЅРёРµР№ LCD_CS
 #define LCD_CS1   LCD_PORT->ODR |= SCE    
 #define LCD_CS0   LCD_PORT->ODR &= ~SCE
-// Управление линией LCD_RST
+// РЈРїСЂР°РІР»РµРЅРёРµ Р»РёРЅРёРµР№ LCD_RST
 #define LCD_RST1  LCD_PORT->ODR |= RST
 #define LCD_RST0  LCD_PORT->ODR &= ~RST
-// Управление линией LCD_DC
+// РЈРїСЂР°РІР»РµРЅРёРµ Р»РёРЅРёРµР№ LCD_DC
 #define LCD_DC1   LCD_PORT->ODR |=  DC
 #define LCD_DC0   LCD_PORT->ODR &= ~DC
-// Управление линией LCD_SCK
+// РЈРїСЂР°РІР»РµРЅРёРµ Р»РёРЅРёРµР№ LCD_SCK
 #define LCD_SCK1   LCD_PORT->ODR |= SCLK
 #define LCD_SCK0   LCD_PORT->ODR &= ~SCLK
-// Управление линией LCD_MOSI
+// РЈРїСЂР°РІР»РµРЅРёРµ Р»РёРЅРёРµР№ LCD_MOSI
 #define LCD_MOSI1   LCD_PORT->ODR |= MOSI
 #define LCD_MOSI0   LCD_PORT->ODR &= ~MOSI
 
-unsigned char lcd8544_buff[84*6]; // буфер дисплея
+unsigned char lcd8544_buff[84*6]; // Р±СѓС„РµСЂ РґРёСЃРїР»РµСЏ
 
 
-// отправка данных\команд на дисплей
+// РѕС‚РїСЂР°РІРєР° РґР°РЅРЅС‹С…\РєРѕРјР°РЅРґ РЅР° РґРёСЃРїР»РµР№
 void lcd8544_senddata(unsigned char data) {
 unsigned char i;
 	for(i=0;i<8;i++) {
@@ -33,15 +33,15 @@ unsigned char i;
 	}
 }
 
-// обновление дисплея содержимым буфера
+// РѕР±РЅРѕРІР»РµРЅРёРµ РґРёСЃРїР»РµСЏ СЃРѕРґРµСЂР¶РёРјС‹Рј Р±СѓС„РµСЂР°
 void lcd8544_refresh(void) {
-	LCD_CS0;            // СS=0 - начали сеанс работы с дисплеем
+	LCD_CS0;            // РЎS=0 - РЅР°С‡Р°Р»Рё СЃРµР°РЅСЃ СЂР°Р±РѕС‚С‹ СЃ РґРёСЃРїР»РµРµРј
 
-	LCD_DC0;            // передача комманд
-	lcd8544_senddata(0x40); // установка курсора в позицию Y=0; X=0
+	LCD_DC0;            // РїРµСЂРµРґР°С‡Р° РєРѕРјРјР°РЅРґ
+	lcd8544_senddata(0x40); // СѓСЃС‚Р°РЅРѕРІРєР° РєСѓСЂСЃРѕСЂР° РІ РїРѕР·РёС†РёСЋ Y=0; X=0
 	lcd8544_senddata(0x80);
 
-	LCD_DC1;            // передача данных
+	LCD_DC1;            // РїРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С…
 
 	unsigned char y, x;
 
@@ -49,7 +49,7 @@ void lcd8544_refresh(void) {
 }
 
 
-// Инициализация
+// РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
 void lcd8544_init(void) {
 
 	  RCC->AHBENR |= LCD_PH ;
@@ -61,52 +61,52 @@ void lcd8544_init(void) {
 
 
 	  LCD_SCK0;
-	  // сброс дисплея
-	  LCD_CS0;            // CS=0  - начали сеанс работы с дисплеем
-	  LCD_RST0;           // RST=0 - сброс дисплея
+	  // СЃР±СЂРѕСЃ РґРёСЃРїР»РµСЏ
+	  LCD_CS0;            // CS=0  - РЅР°С‡Р°Р»Рё СЃРµР°РЅСЃ СЂР°Р±РѕС‚С‹ СЃ РґРёСЃРїР»РµРµРј
+	  LCD_RST0;           // RST=0 - СЃР±СЂРѕСЃ РґРёСЃРїР»РµСЏ
 	  LCD_RST1;           // RST=1
 
-	  // последовательность инициализации дисплея
-	  LCD_DC0;            // передача команды
+	  // РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РґРёСЃРїР»РµСЏ
+	  LCD_DC0;            // РїРµСЂРµРґР°С‡Р° РєРѕРјР°РЅРґС‹
 
-	  lcd8544_senddata(0x21);      // переход в расширенный режим
+	  lcd8544_senddata(0x21);      // РїРµСЂРµС…РѕРґ РІ СЂР°СЃС€РёСЂРµРЅРЅС‹Р№ СЂРµР¶РёРј
 	  lcd8544_senddata(0xC1);
 
-	  lcd8544_senddata(0x04);		// температурный коэффициент, от 4 до 7
+	  lcd8544_senddata(0x04);		// С‚РµРјРїРµСЂР°С‚СѓСЂРЅС‹Р№ РєРѕСЌС„С„РёС†РёРµРЅС‚, РѕС‚ 4 РґРѕ 7
 
-	  lcd8544_senddata(0x13);		// Bias 0b0001 0xxx - работает как контрастность
+	  lcd8544_senddata(0x13);		// Bias 0b0001 0xxx - СЂР°Р±РѕС‚Р°РµС‚ РєР°Рє РєРѕРЅС‚СЂР°СЃС‚РЅРѕСЃС‚СЊ
 
-	  lcd8544_senddata(0x20); 	    // переход в обычный режим
+	  lcd8544_senddata(0x20); 	    // РїРµСЂРµС…РѕРґ РІ РѕР±С‹С‡РЅС‹Р№ СЂРµР¶РёРј
 	  lcd8544_senddata(0x0C);	    // 0b1100 - normal mode (0x0C)
 			                        // 0b1101 - invert mode (0x0D)
-			                        // 0b1001 - полностью засвеченный экран (0x09)
-			                        // 0b1000 - чистый экран(0x08)
+			                        // 0b1001 - РїРѕР»РЅРѕСЃС‚СЊСЋ Р·Р°СЃРІРµС‡РµРЅРЅС‹Р№ СЌРєСЂР°РЅ (0x09)
+			                        // 0b1000 - С‡РёСЃС‚С‹Р№ СЌРєСЂР°РЅ(0x08)
 
-	  LCD_DC1;            // передача данных
+	  LCD_DC1;            // РїРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С…
 
 	  lcd8544_refresh();
 }
 
 
-//прередача команд управления на дисплей
+//РїСЂРµСЂРµРґР°С‡Р° РєРѕРјР°РЅРґ СѓРїСЂР°РІР»РµРЅРёСЏ РЅР° РґРёСЃРїР»РµР№
 void lcd8544_command(unsigned char cmd) {
 	
-	LCD_DC0;            // передача команды
-	lcd8544_senddata(cmd); //отправка команды на дисплей
-	LCD_DC1;            // передача данных
+	LCD_DC0;            // РїРµСЂРµРґР°С‡Р° РєРѕРјР°РЅРґС‹
+	lcd8544_senddata(cmd); //РѕС‚РїСЂР°РІРєР° РєРѕРјР°РЅРґС‹ РЅР° РґРёСЃРїР»РµР№
+	LCD_DC1;            // РїРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С…
 	
 }
 
 
 void lcd8544_gotoxy(unsigned char x, unsigned char y) {
 	
-	LCD_DC0;            // передача комманд
-	lcd8544_senddata(0x40 | y); // установка курсора в позицию e; x
+	LCD_DC0;            // РїРµСЂРµРґР°С‡Р° РєРѕРјРјР°РЅРґ
+	lcd8544_senddata(0x40 | y); // СѓСЃС‚Р°РЅРѕРІРєР° РєСѓСЂСЃРѕСЂР° РІ РїРѕР·РёС†РёСЋ e; x
 	lcd8544_senddata(0x80 | x);
-	LCD_DC1;            // передача данных
+	LCD_DC1;            // РїРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С…
 }
 
-// вывод пиксела
+// РІС‹РІРѕРґ РїРёРєСЃРµР»Р°
 void lcd8544_putpix(unsigned char x, unsigned char y, unsigned char mode) {
 	if ((x>84) || (y>47)) return;
 
@@ -119,7 +119,7 @@ void lcd8544_putpix(unsigned char x, unsigned char y, unsigned char mode) {
 
 
 
-// процедура рисования линии
+// РїСЂРѕС†РµРґСѓСЂР° СЂРёСЃРѕРІР°РЅРёСЏ Р»РёРЅРёРё
 void lcd8544_line(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode) {
 signed char   dx, dy, sx, sy;
 unsigned char  x,  y, mdx, mdy, l;
@@ -157,7 +157,7 @@ unsigned char  x,  y, mdx, mdy, l;
 
 
 
-// рисование прямоугольника (не заполненного)
+// СЂРёСЃРѕРІР°РЅРёРµ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР° (РЅРµ Р·Р°РїРѕР»РЅРµРЅРЅРѕРіРѕ)
 void lcd8544_rect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode) {
 	lcd8544_line(x1,y1, x2,y1, mode);
 	lcd8544_line(x1,y2, x2,y2, mode);
@@ -165,7 +165,7 @@ void lcd8544_rect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned
 	lcd8544_line(x2,y1, x2,y2, mode);
 }
 
-//ование заполненого прямоугольника
+//РѕРІР°РЅРёРµ Р·Р°РїРѕР»РЅРµРЅРѕРіРѕ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР°
 void lcd8544_fillrect(unsigned char x1, unsigned char y1, unsigned char x2, unsigned char y2, unsigned char mode) {
 		unsigned char  dy, i;
 	dy=y2-y1;
@@ -175,18 +175,18 @@ void lcd8544_fillrect(unsigned char x1, unsigned char y1, unsigned char x2, unsi
 	}
 }
 
-// вывод символа на экран по координатам
+// РІС‹РІРѕРґ СЃРёРјРІРѕР»Р° РЅР° СЌРєСЂР°РЅ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
 void lcd8544_putchar(unsigned char px, unsigned char py, unsigned char ch, unsigned char mode) {
 	const unsigned char *fontpointer;
 
 
-	if (ch<127) {	// знакогенератор латиницы
+	if (ch<127) {	// Р·РЅР°РєРѕРіРµРЅРµСЂР°С‚РѕСЂ Р»Р°С‚РёРЅРёС†С‹
 		fontpointer=NewFontLAT; ch=ch-32; }
-		else	{	// знакогенератор русских букв
+		else	{	// Р·РЅР°РєРѕРіРµРЅРµСЂР°С‚РѕСЂ СЂСѓСЃСЃРєРёС… Р±СѓРєРІ
 		fontpointer=NewFontRUS; ch=ch-192;}
 
-    unsigned char lcd_YP=7- (py & 0x07);    // битовая позиция символа в байте
-    unsigned char lcd_YC=(py & 0xF8)>>3; 	// байтовая позиция символа на экране
+    unsigned char lcd_YP=7- (py & 0x07);    // Р±РёС‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ СЃРёРјРІРѕР»Р° РІ Р±Р°Р№С‚Рµ
+    unsigned char lcd_YC=(py & 0xF8)>>3; 	// Р±Р°Р№С‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ СЃРёРјРІРѕР»Р° РЅР° СЌРєСЂР°РЅРµ
     unsigned char x;
 	for (x=0; x<6; x++) {
 
@@ -194,15 +194,15 @@ void lcd8544_putchar(unsigned char px, unsigned char py, unsigned char ch, unsig
 
 		if (mode==0) {
 			temp=~temp;
-			if (py>0) lcd8544_putpix(px, py-1, 1);	// если печать в режиме инверсии - сверху отчертим линию
+			if (py>0) lcd8544_putpix(px, py-1, 1);	// РµСЃР»Рё РїРµС‡Р°С‚СЊ РІ СЂРµР¶РёРјРµ РёРЅРІРµСЂСЃРёРё - СЃРІРµСЂС…Сѓ РѕС‚С‡РµСЂС‚РёРј Р»РёРЅРёСЋ
 		} 
 			
 
 		temp&=0x7F;
 
-		lcd8544_buff[lcd_YC*84+px]=lcd8544_buff[lcd_YC*84+px] | (temp<<(7-lcd_YP)); 	// печать верхней части символа
+		lcd8544_buff[lcd_YC*84+px]=lcd8544_buff[lcd_YC*84+px] | (temp<<(7-lcd_YP)); 	// РїРµС‡Р°С‚СЊ РІРµСЂС…РЅРµР№ С‡Р°СЃС‚Рё СЃРёРјРІРѕР»Р°
 
-	    if (lcd_YP<7) lcd8544_buff[(lcd_YC+1)*84+px]=lcd8544_buff[(lcd_YC+1)*84+px] | (temp>>(lcd_YP+1)); 	// печать нижней части символа
+	    if (lcd_YP<7) lcd8544_buff[(lcd_YC+1)*84+px]=lcd8544_buff[(lcd_YC+1)*84+px] | (temp>>(lcd_YP+1)); 	// РїРµС‡Р°С‚СЊ РЅРёР¶РЅРµР№ С‡Р°СЃС‚Рё СЃРёРјРІРѕР»Р°
 
 		px++;
 		if (px>83) return;
@@ -210,7 +210,7 @@ void lcd8544_putchar(unsigned char px, unsigned char py, unsigned char ch, unsig
 }
 
 
-// печать десятичного числа
+// РїРµС‡Р°С‚СЊ РґРµСЃСЏС‚РёС‡РЅРѕРіРѕ С‡РёСЃР»Р°
 void lcd8544_dec(unsigned int numb, unsigned char dcount, unsigned char x, unsigned char y, unsigned char mode) {
 	unsigned int divid=10000;
 	unsigned char i;
@@ -230,13 +230,13 @@ void lcd8544_dec(unsigned int numb, unsigned char dcount, unsigned char x, unsig
 }
 
 
-// линия левее символа для печати в инверсе
+// Р»РёРЅРёСЏ Р»РµРІРµРµ СЃРёРјРІРѕР»Р° РґР»СЏ РїРµС‡Р°С‚Рё РІ РёРЅРІРµСЂСЃРµ
 void lcd8544_leftchline(unsigned char x, unsigned char y) {
 	if (x>0) lcd8544_line(x-1, y-1, x-1, y+6, 1);
 }
 
 
-// вывод строки
+// РІС‹РІРѕРґ СЃС‚СЂРѕРєРё
 void lcd8544_putstr(unsigned char x, unsigned char y, const unsigned char str[], unsigned char mode) {
 	if (!mode) lcd8544_leftchline(x, y);
 	while (*str!=0) {
@@ -247,13 +247,13 @@ void lcd8544_putstr(unsigned char x, unsigned char y, const unsigned char str[],
 }
 
 void lcd8544_clear(void){
-	LCD_CS0;            // СS=0 - начали сеанс работы с дисплеем
+	LCD_CS0;            // РЎS=0 - РЅР°С‡Р°Р»Рё СЃРµР°РЅСЃ СЂР°Р±РѕС‚С‹ СЃ РґРёСЃРїР»РµРµРј
 
-	LCD_DC0;            // передача комманд
-	lcd8544_senddata(0x40); // установка курсора в позицию Y=0; X=0
+	LCD_DC0;            // РїРµСЂРµРґР°С‡Р° РєРѕРјРјР°РЅРґ
+	lcd8544_senddata(0x40); // СѓСЃС‚Р°РЅРѕРІРєР° РєСѓСЂСЃРѕСЂР° РІ РїРѕР·РёС†РёСЋ Y=0; X=0
 	lcd8544_senddata(0x80);
 
-	LCD_DC1;            // передача данных
+	LCD_DC1;            // РїРµСЂРµРґР°С‡Р° РґР°РЅРЅС‹С…
 
 	unsigned char y, x;
 	
